@@ -1,0 +1,142 @@
+/* Component base wrapper used across pages */
+.component {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+}
+
+/* Skeleton */
+@keyframes skeleton-shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+.skeleton {
+  background: linear-gradient(90deg, rgba(0,0,0,0.06) 25%, rgba(0,0,0,0.12) 37%, rgba(0,0,0,0.06) 63%);
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.2s ease-in-out infinite;
+}
+.dark .skeleton {
+  background: linear-gradient(90deg, rgba(255,255,255,0.06) 25%, rgba(255,255,255,0.12) 37%, rgba(255,255,255,0.06) 63%);
+}
+
+/* Buttons */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-foreground);
+  cursor: pointer;
+}
+.button:hover { opacity: 0.9; }
+
+.button-primary { background: var(--color-primary); color: var(--color-primary-foreground); border-color: transparent; }
+.button-secondary { background: var(--color-secondary); color: var(--color-secondary-foreground); }
+.button-ghost { background: transparent; color: var(--color-foreground); }
+
+/* Page style scopes */
+.page-examples .component {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.page-neomorphism .component {
+  background: var(--color-background);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-neu-light);
+}
+
+.page-glassmorphism .component {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop);
+  -webkit-backdrop-filter: var(--glass-backdrop);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+}
+
+/* Fondo temático para la página de Glassmorphism */
+.page-glassmorphism {
+  background-image: url('https://images.pexels.com/photos/33320127/pexels-photo-33320127.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-radius: 2%;
+}
+.dark .page-glassmorphism {
+  background-image: url('https://images.pexels.com/photos/4722576/pexels-photo-4722576.jpeg');
+}
+
+/* Modern style helpers (tuned for light/dark) */
+.modern-gradient {
+  background-image: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  border-radius: 1rem;
+}
+.modern-surface {
+  background: color-mix(in oklab, var(--color-background) 96%, black 4%);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.06);
+}
+.dark .modern-surface {
+  background: color-mix(in oklab, var(--color-background) 88%, white 12%);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.18), 0 8px 24px rgba(0,0,0,0.24);
+}
+.gradient-text {
+  background-image: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.modern-button {
+  background-image: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: var(--color-primary-foreground);
+  border-color: transparent;
+}
+
+/* Optional soft background for modern page */
+.page-modern {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--color-background) 95%, var(--color-primary) 5%) 0%,
+    var(--color-background) 40%,
+    var(--color-background) 100%
+  );
+}
+.dark .page-modern {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--color-background) 92%, var(--color-primary) 8%) 0%,
+    var(--color-background) 50%,
+    var(--color-background) 100%
+  );
+}
+
+/* Dotted background utility for sections */
+.dotted-bg {
+  background-image: radial-gradient(
+    color-mix(in oklab, var(--color-foreground) 12%, transparent 88%) 1px,
+    transparent 1px
+  );
+  background-size: 16px 16px;
+}
+
+/* Card variants */
+.card-elevated { box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 12px 24px rgba(0,0,0,0.06); }
+.dark .card-elevated { box-shadow: 0 2px 8px rgba(0,0,0,0.2), 0 12px 24px rgba(0,0,0,0.24); }
+.card-accent { border-color: var(--color-accent); }
+.card-gradient { background-image: linear-gradient(135deg, var(--color-primary), var(--color-accent)); }
+.card-hover { transition: transform 160ms ease, box-shadow 160ms ease; }
+.card-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.08); }
+.dark .card-hover:hover { box-shadow: 0 10px 24px rgba(0,0,0,0.28); }
+
+/* Media block inside cards */
+.card-media { border: 1px solid var(--color-border); border-radius: 0.75rem; overflow: hidden; }
+.card-cta {
+  background: var(--color-primary);
+  color: var(--color-primary-foreground);
+  border-color: transparent;
+}

@@ -1,0 +1,41 @@
+@theme {
+  --font-sans: 'Poppins', 'Inter', system-ui, sans-serif;
+  --color-primary: #3b82f6;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f1f5f9;
+  --color-secondary-foreground: #0f172a;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-accent: #f59e0b;
+  --color-accent-foreground: #ffffff;
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
+  --color-border: #e2e8f0;
+  --color-muted: #f8fafc;
+  --color-muted-foreground: #64748b;
+  --shadow-neu-light: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  --shadow-neu-inset: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-backdrop: blur(20px);
+}
+
+.dark {
+  --color-primary: #60a5fa;
+  --color-primary-foreground: #030712;
+  --color-secondary: #1e293b;
+  --color-secondary-foreground: #f8fafc;
+  --color-destructive: #f87171;
+  --color-destructive-foreground: #030712;
+  --color-accent: #fbbf24;
+  --color-accent-foreground: #030712;
+  --color-background: #020617;
+  --color-foreground: #f8fafc;
+  --color-border: #334155;
+  --color-muted: #0f172a;
+  --color-muted-foreground: #94a3b8;
+  --shadow-neu-light: 20px 20px 60px #000000, -20px -20px 60px #1e293b;
+  --shadow-neu-inset: inset 20px 20px 60px #000000, inset -20px -20px 60px #1e293b;
+  --glass-bg: rgba(30, 41, 59, 0.4);
+  --glass-border: rgba(148, 163, 184, 0.18);
+}
