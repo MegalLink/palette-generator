@@ -38,6 +38,7 @@ Actualiza este archivo añadiendo nuevas tareas debajo. Usa el formato de casill
  - [x] Botón de envío en FormSection sin degradado fuera de Modern (scoped .form-submit-btn)
  - [x] Botón "Generar paleta" en Hero abre QuickSettings (evento quicksettings:toggle)
  - [x] La sección de paletas guardadas no se salga (grid + collapse)
+ - [x] Modern page enriquecida con burbujas decorativas y gradient rings adicionales
  - La seccion de hero , el boton que dice generar paleta debe abrir los QuickSettings  
 ---
 

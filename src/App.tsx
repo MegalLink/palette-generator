@@ -15,7 +15,7 @@ const rootRoute = createRootRoute({
       <header className="border-b border-border">
         <nav className="container mx-auto flex items-center gap-4 p-4">
           <Link to="/" className="button button-ghost">Home</Link>
-          <Link to="/examples" className="button button-ghost">Examples</Link>
+          <Link to="/examples" className="button button-ghost">Example</Link>
           <Link to="/neomorphism" className="button button-ghost">Neomorphism</Link>
           <Link to="/glassmorphism" className="button button-ghost">Glassmorphism</Link>
           <Link to="/modern" className="button button-ghost">Modern</Link>

@@ -75,18 +75,6 @@ export function NeomorphismPage() {
                 height: size,
                 borderRadius: radius,
                 background: 'var(--neo-demo-bg, #e0e0e0)',
-                boxShadow: 'var(--shadow-neu-light)'
-              }}
-            >
-              luz
-            </div>
-            <div
-              className="flex items-center justify-center text-xs"
-              style={{
-                width: size,
-                height: size,
-                borderRadius: radius,
-                background: 'var(--neo-demo-bg, #e0e0e0)',
                 boxShadow: 'var(--shadow-neu-inset)'
               }}
             >
