@@ -32,7 +32,15 @@ export function Hero() {
 
         {/* CTAs */}
         <div className="mt-5 flex flex-wrap items-center gap-4 justify-center md:justify-start">
-          <a className="button button-primary" href="/">Generar paleta</a>
+          <button
+            className="button button-primary"
+            onClick={() => {
+              // Abrir panel QuickSettings
+              window.dispatchEvent(new Event('quicksettings:toggle'))
+            }}
+          >
+            Generar paleta
+          </button>
 
           <a href="#" className="inline-flex items-center gap-2">
             <span

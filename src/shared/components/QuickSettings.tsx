@@ -109,29 +109,60 @@ export function QuickSettings({ mode = 'floating' }: { mode?: Mode }) {
           )}
 
           {saved.length > 0 && (
-            <div className="w-full mt-6">
-              <div className="flex items-center justify-between mb-2">
-                <strong className="text-sm">Guardadas ({saved.length})</strong>
-                <div className="flex gap-2">
-                  <button className="button text-xs" onClick={clearSaved} title="Eliminar todas">Vaciar</button>
-                </div>
-              </div>
-              <div className="flex flex-col gap-2 max-h-60 overflow-y-auto pr-1">
-                {saved.map((p, idx) => (
-                  <div key={idx} className="component p-2 rounded-md flex items-center gap-2">
-                    {p.map((col, ci) => (
-                      <span key={ci} className="w-6 h-6 rounded border border-border" style={{ background: col }} />
-                    ))}
-                    <div className="ml-auto flex gap-1">
-                      <button className="button text-xs" onClick={() => loadSaved(idx)} title="Aplicar">Usar</button>
-                      <button className="button text-xs" onClick={() => deleteSaved(idx)} title="Borrar">X</button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <SavedPalettesSection
+              count={saved.length}
+              onClear={clearSaved}
+              onUse={loadSaved}
+              onDelete={deleteSaved}
+              palettes={saved}
+            />
           )}
 
+        </div>
+      )}
+    </div>
+  )
+}
+
+function SavedPalettesSection({
+  count,
+  palettes,
+  onClear,
+  onUse,
+  onDelete,
+}: {
+  count: number
+  palettes: string[][]
+  onClear: () => void
+  onUse: (idx: number) => void
+  onDelete: (idx: number) => void
+}) {
+  const [collapsed, setCollapsed] = useState(false)
+  return (
+    <div className="w-full mt-6">
+      <div className="flex items-center justify-between mb-2">
+        <button className="text-sm font-semibold flex items-center gap-1" onClick={()=>setCollapsed(c=>!c)} aria-expanded={!collapsed} aria-controls="saved-palettes-list">
+          Guardadas ({count}) {collapsed ? '▸' : '▾'}
+        </button>
+        <div className="flex gap-2">
+          <button className="button text-xs" onClick={onClear} title="Eliminar todas">Vaciar</button>
+        </div>
+      </div>
+      {!collapsed && (
+        <div id="saved-palettes-list" className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-60 overflow-y-auto pr-1 auto-rows-min">
+          {palettes.map((p, idx) => (
+            <div key={idx} className="component p-2 rounded-md flex flex-col gap-2">
+              <div className="flex flex-wrap gap-1">
+                {p.map((col, ci) => (
+                  <span key={ci} className="w-5 h-5 rounded border border-border" style={{ background: col }} />
+                ))}
+              </div>
+              <div className="flex gap-1">
+                <button className="button text-xs flex-1" onClick={() => onUse(idx)} title="Aplicar">Usar</button>
+                <button className="button text-xs" onClick={() => onDelete(idx)} title="Borrar">X</button>
+              </div>
+            </div>
+          ))}
         </div>
       )}
     </div>

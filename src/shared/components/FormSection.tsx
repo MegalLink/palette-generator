@@ -21,12 +21,7 @@ export function FormSection({ className = '', style }: { className?: string; sty
             <textarea id="message" className="component p-3 rounded-md min-h-32" placeholder="Cuéntanos más..." aria-label="Additional details" />
             <button
               type="submit"
-              className="w-full px-5 py-3 rounded-full font-medium"
-              style={{
-                backgroundImage: 'linear-gradient(135deg, var(--color-accent), var(--color-primary))',
-                color: 'var(--color-primary-foreground)',
-                border: '1px solid transparent',
-              }}
+              className="form-submit-btn w-full px-5 py-3 rounded-full font-medium"
             >
               Enviar
             </button>

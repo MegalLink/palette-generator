@@ -34,7 +34,10 @@ Actualiza este archivo añadiendo nuevas tareas debajo. Usa el formato de casill
  - [x] La configuracion para neomorphism debe manejarse con variables (sliders distance/blur/intensity) (movido fuera de QuickSettings a la página)
  - [x] Agregar icon button de cerrar a QuickSettings (incluye Escape key)
  - [x] La configuracion para glassmorphism debe manejarse con variables (blur/refraction/depth) mostradas solo en la página (store + sliders + persist)
- - [ ] Los gradientes deben aplicarse solo en la página modern , en las demas páginas no se debe agregar gradientes
- - [ ] La seccion de paletas guardadas esta saliendose de la vista
+ - [x] Los gradientes deben aplicarse solo en la página modern (scoped estilos + fallback texto)
+ - [x] Botón de envío en FormSection sin degradado fuera de Modern (scoped .form-submit-btn)
+ - [x] Botón "Generar paleta" en Hero abre QuickSettings (evento quicksettings:toggle)
+ - [x] La sección de paletas guardadas no se salga (grid + collapse)
+ - La seccion de hero , el boton que dice generar paleta debe abrir los QuickSettings  
 ---
 
