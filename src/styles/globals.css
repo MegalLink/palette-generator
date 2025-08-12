@@ -18,6 +18,7 @@
   --glass-bg: rgba(255, 255, 255, 0.25);
   --glass-border: rgba(255, 255, 255, 0.18);
   --glass-backdrop: blur(20px);
+  --glass-shadow: 0 4px 20px rgba(0,0,0,0.25);
 }
 
 .dark {
@@ -38,4 +39,5 @@
   --shadow-neu-inset: inset 20px 20px 60px #000000, inset -20px -20px 60px #1e293b;
   --glass-bg: rgba(30, 41, 59, 0.4);
   --glass-border: rgba(148, 163, 184, 0.18);
+  --glass-shadow: 0 4px 20px rgba(0,0,0,0.35);
 }
