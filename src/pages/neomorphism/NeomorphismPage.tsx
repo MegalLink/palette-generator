@@ -45,6 +45,13 @@ export function NeomorphismPage() {
     document.documentElement.style.setProperty('--neo-demo-bg', baseColor)
   }, [baseColor])
 
+  // Reset sombras al cambiar el tema (dark/light)
+  useEffect(() => {
+    const handler = () => neo.reset()
+    window.addEventListener('theme:changed', handler)
+    return () => window.removeEventListener('theme:changed', handler)
+  }, [neo])
+
   return (
     <div className="page-neomorphism space-y-8">
       <Hero />

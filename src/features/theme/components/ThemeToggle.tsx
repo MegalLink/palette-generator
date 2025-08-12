@@ -53,7 +53,8 @@ export function ThemeToggle() {
     requestAnimationFrame(recalc)
 
     // Notifica (por compatibilidad) que el tema cambió
-    window.dispatchEvent(new Event('palette:reapply'))
+  window.dispatchEvent(new Event('palette:reapply'))
+  window.dispatchEvent(new Event('theme:changed'))
   }, [isDark])
 
   return (
